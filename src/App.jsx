@@ -1,32 +1,78 @@
-import { useState } from 'react'
-import viteLogo from '/logo-transparent.png'
-import './App.css'
+import { useContext } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { AuthContext } from "./components/auth/AuthContext";
+
+import AdminDashboard from "./components/pages/Admin-dashboard";
+import Home from "./components/pages/Home";
+import Login from "./components/pages/Login";
+import NoPage from "./components/pages/No-page";
+import RecipeManager from "./components/pages/Recipe-manager";
+import Icons from "./helpers/Icons";
+import Recipe from "./components/pages/Recipe";
+import Signup from "./components/pages/Signup";
+import RecipeForm from "./components/pages/Recipe-form";
+import Results from "./components/pages/Results";
+import RequestPasswordReset from "./components/pages/Request-password-reset";
+import ResetPassword from "./components/pages/Reset-password";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { loggedInStatus, adminStatus } = useContext(AuthContext);
+
+  Icons();
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/request-password-reset" element={<RequestPasswordReset />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/recipe/:id" element={<Recipe />} />
+        <Route path="/results/:searchKey" element={<Results />} />
 
-      </div>
-      <h1>Vite + React + Pedro</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+        <Route
+          path="/recipe-manager"
+          element={
+            loggedInStatus === "LOGGED_IN" ? (
+              <RecipeManager />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          path="/add-recipe"
+          element={
+            loggedInStatus === "LOGGED_IN" ? (
+              <RecipeForm />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          path="/edit-recipe/:id"
+          element={
+            loggedInStatus === "LOGGED_IN" ? (
+              <RecipeForm />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          path="/admin-dashboard"
+          element={
+            loggedInStatus === "LOGGED_IN" && adminStatus === "ADMIN" ? (
+              <AdminDashboard />
+            ) : (
+              <Navigate to="/" />
+            )
+          }
+        />
+        <Route path="*" element={<NoPage />} />
+      </Routes>
+  );
 }
 
-export default App
+export default App;

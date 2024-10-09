@@ -1,0 +1,45 @@
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  background-image: linear-gradient(200deg, $primary-bg, $tertiary-bg);
+  background-attachment: fixed;
+  color: $primary-text;
+  font-family: $primary-font;
+  scroll-behavior: smooth;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .flex-wrapper {
+    @include basic-flex();
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+}
+
+.error-text {
+  @include basic-error();
+}
+
+.add-recipe-btn {
+  @include basic-btn();
+
+  & {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: $green-inactive;
+  }
+
+  &:hover {
+    background-color: $green-active;
+  }
+}
+
+.basic-btn {
+  @include basic-btn();
+}

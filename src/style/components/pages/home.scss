@@ -1,0 +1,35 @@
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+  width: 80vw;
+
+  .logo-wrapper {
+    @include basic-flex();
+    margin: 0;
+    text-transform: uppercase;
+    font-family: $secondary-font;
+    font-size: 3rem;
+
+    img {
+      height: 100px;
+
+      @media screen and (max-width: 800px) {
+        height: 80px;
+      }
+
+      @media screen and (max-width: 600px) {
+        height: 50px;
+      }
+    }
+  }
+
+  .searchbar-wrapper {
+    margin-top: 15px;
+  }
+  .home-recipes-wrapper {
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-around;
+  }
+}

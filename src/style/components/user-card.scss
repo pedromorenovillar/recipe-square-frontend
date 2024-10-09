@@ -1,0 +1,56 @@
+.card-wrapper {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  width: 60vw;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 5px;
+  box-shadow: $box-shadow-inactive;
+
+  .user-info, .user-mngmt-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-self: start;
+    padding: 5px;
+  }
+  .username,
+  .email,
+  .user-role {
+    font-size: 0.9em;
+    padding: 5px;
+  }
+
+  .change-role-btn {
+    width: 130px;
+    display: flex;
+    justify-content: space-evenly;
+    @include basic-btn();
+  }
+  .delete-user-btn {
+    @extend .change-role-btn;
+
+    & {
+      background-color: $red-inactive;
+    }
+
+    &:hover {
+      background-color: $red-active;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .card-wrapper {
+    flex-direction: column;
+    width: 80%;
+  }
+}

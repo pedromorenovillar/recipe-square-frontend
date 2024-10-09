@@ -1,0 +1,8 @@
+.suggestion-result {
+  padding: 10px 20px;
+
+  &:hover {
+    background-color: $tertiary-bg;
+    color: $primary-bg;
+  }
+}

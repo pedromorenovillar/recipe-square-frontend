@@ -1,0 +1,55 @@
+.dashboard-title-wrapper {
+  display: flex;
+
+  .management-header {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-right: 69px;
+  }
+}
+
+.management-btns * {
+  width: 150px;
+  @include basic-btn;
+}
+
+.recipe-management {
+  width: 80%;
+  height: 100%;
+  border: 1px solid black;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: $box-shadow-inactive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-management {
+  @extend .recipe-management;
+}
+
+
+@media screen and (max-width: 800px) {
+  .dashboard-title-wrapper {
+    display: flex;
+  
+    .management-header {
+      font-size: 0.8em;
+    }
+  }
+  
+  .management-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .recipe-management {
+    font-size: 80%;
+    text-wrap: nowrap;
+  }
+}

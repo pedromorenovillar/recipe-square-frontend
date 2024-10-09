@@ -1,0 +1,14 @@
+.suggestions-list {
+  width: 66%;
+  background-color: $secondary-bg;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  box-shadow: $box-shadow-inactive;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  max-height: 300px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  font-family: $secondary-font;
+}

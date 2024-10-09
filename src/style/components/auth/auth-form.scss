@@ -1,0 +1,38 @@
+.login-btns {
+  display: flex;
+  width: 55%;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.forgot-btn,
+.submit-btn {
+  @include basic-btn();
+
+  & {
+    width: 170px;
+  }
+}
+
+.login {
+  @include basic-input();
+}
+
+.formRedirectionText {
+  font-family: $secondary-font;
+}
+
+@media screen and (max-width: 800px) {
+  .flex-wrapper > h2 {
+    padding: 20px;
+  }
+
+  .login > input {
+    width: auto;
+  }
+  .login-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+}

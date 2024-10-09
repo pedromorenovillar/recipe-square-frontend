@@ -1,0 +1,24 @@
+@import "./base/colors&variables.scss";
+@import "./base/mixins.scss";
+@import "./base/generic.scss";
+
+@import "./components/navbar.scss";
+@import "./components/user-card.scss";
+@import "./components/react-draft-wysiwyg.scss";
+
+@import "./components/auth/auth-form.scss";
+
+@import "./components/pages/admin-dashboard.scss";
+@import "./components/pages/home.scss";
+@import "./components/pages/reset-password.scss";
+@import "./components/pages/recipe.scss";
+@import "./components/pages/recipe-form.scss";
+
+@import "./components/recipe/recipe-card.scss";
+@import "./components/recipe/recipe-container.scss";
+@import "./components/recipe/recipe-item.scss";
+
+@import "./components/search/result-item.scss";
+@import "./components/search/searchbar.scss";
+@import "./components/search/search-suggestion.scss";
+@import "./components/search/search-suggestions-list.scss";

@@ -1,0 +1,57 @@
+@mixin basic-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin basic-input {
+  input {
+    padding: 5px 0px;
+    margin: 5px 0px 10px 0px;
+    width: 30%;
+    font-size: 1.2em;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 2px solid transparent;
+    border-radius: 3px;
+    text-indent: 10px;
+    background-color: white;
+    box-shadow: $box-shadow-inactive;
+
+    &:focus {
+      outline: none;
+      background-color: $secondary-bg;
+      border-bottom: 2px solid black;
+      box-shadow: $box-shadow-active;
+    }
+  }
+}
+
+@mixin basic-btn {
+  font-size: 1.2rem;
+  background-color: $secondary-bg;
+  border-radius: 3px;
+  border: 1px solid $primary-text;
+  padding: 10px;
+  margin: 10px;
+  transition: $transition;
+
+  &:hover {
+    background-color: $tertiary-bg;
+    color: $primary-bg;
+  }
+
+  &:active {
+    background-color: $tertiary-text;
+    color: $primary-bg;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
+  }
+}
+
+@mixin basic-error {
+  color: $red-active;
+  font-family: $secondary-font;
+}
