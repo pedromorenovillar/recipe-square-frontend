@@ -6,7 +6,7 @@ import { addRecipe, updateRecipe, getRecipeById } from "../../helpers/API";
 import { AuthContext } from "../auth/AuthContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
-// import { EditorState, convertFromRaw, convertToRaw } from "draft-js";
+import { EditorState, convertFromRaw, convertToRaw } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
 
 export default function RecipeForm() {

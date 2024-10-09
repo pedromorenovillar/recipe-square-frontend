@@ -32,9 +32,11 @@
         display: block;
         padding: 15px 19px;
         text-decoration: none;
+        color: $primary-text;
       }
       *:hover {
         background-color: $tertiary-bg;
+        color: $primary-bg;
       }
     }
   }
