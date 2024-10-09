@@ -1,8 +1,13 @@
 {
   "name": "recipe-square-frontend",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Recipe Square: A place to easily store and share food recipes with family and friends.",
+  "engines": {
+    "node": "20.18.0",
+    "npm": "10.9.0"
+  },
   "scripts": {
     "dev": "vite",
     "start": "serve -s dist",
@@ -10,6 +15,27 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pedromorenovillar/recipe-square-frontend.git"
+  },
+  "keywords": [
+    "cooking",
+    "recipe",
+    "food",
+    "sharing",
+    "cookbook",
+    "cookapp",
+    "recipeapp",
+    "gourmet",
+    "cook"
+  ],
+  "author": "Pedro José Moreno Villar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pedromorenovillar"
+  },
+  "homepage": "https://github.com/pedromorenovillar",
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
