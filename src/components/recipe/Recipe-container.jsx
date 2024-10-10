@@ -41,7 +41,7 @@ export default function RecipeContainer() {
         )}
       </div>
       <div className="highlights-footer">
-        10/10/2024 © Recipe Square. All rights reserved.
+        (Version 1.0.0) 2024 © Recipe Square. All rights reserved.
       </div>
     </div>
   );
