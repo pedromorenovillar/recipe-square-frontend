@@ -12,7 +12,6 @@
     text-transform: capitalize;
     text-decoration: underline;
     justify-content: space-around;
-
   }
 
   .highlights-spinner-wrapper {
@@ -35,25 +34,22 @@
     text-align: center;
     margin-top: 15px;
     font-family: $secondary-font;
-
   }
 }
 @media screen and (max-width: 700px) {
   .highlights-container {
-      
     .today-highlights-header {
       font-size: 1.5rem;
       padding: 20px;
     }
-  
- 
+
     .recipe-card-wrapper {
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
       height: 100vh;
     }
-  
+
     .highlights-footer {
       position: relative;
       margin-top: auto;

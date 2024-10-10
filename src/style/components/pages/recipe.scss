@@ -1,5 +1,4 @@
 .recipe-grid {
-  // background-color: green;
   height: 90vh;
   width: 90vw;
   display: grid;
@@ -7,7 +6,6 @@
   gap: 15px;
 
   .left-column {
-    // background-color: blue;
     display: flex;
     flex-direction: column;
     height: fit-content;
@@ -26,7 +24,6 @@
       margin-bottom: 20px;
     }
     .recipe-image img {
-      // width: 150px;
       height: 200px;
     }
     .recipe-instructions {

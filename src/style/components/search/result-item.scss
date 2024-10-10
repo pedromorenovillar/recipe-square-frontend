@@ -18,24 +18,23 @@
     border: 1px solid black;
     box-shadow: $box-shadow-inactive;
   }
-  
+
   .result-title-wrapper {
     display: flex;
     width: inherit;
     justify-content: center;
 
-  .result-title {
-    font-size: 1.8em;
-    text-transform: capitalize;
-    font-family: $primary-font;
-    width: inherit;
-  }
+    .result-title {
+      font-size: 1.8em;
+      text-transform: capitalize;
+      font-family: $primary-font;
+      width: inherit;
+    }
   }
 }
 @media screen and (max-width: 800px) {
   .result-wrapper {
     flex-direction: column;
-    
 
     .result-title-wrapper {
       width: 100%;
@@ -49,6 +48,5 @@
         width: auto;
       }
     }
-
   }
 }

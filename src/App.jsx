@@ -21,57 +21,60 @@ function App() {
   Icons();
 
   return (
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/request-password-reset" element={<RequestPasswordReset />} />
-        <Route path="/reset-password" element={<ResetPassword />} />
-        <Route path="/recipe/:id" element={<Recipe />} />
-        <Route path="/results/:searchKey" element={<Results />} />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route
+        path="/request-password-reset"
+        element={<RequestPasswordReset />}
+      />
+      <Route path="/reset-password" element={<ResetPassword />} />
+      <Route path="/recipe/:id" element={<Recipe />} />
+      <Route path="/results/:searchKey" element={<Results />} />
 
-        <Route
-          path="/recipe-manager"
-          element={
-            loggedInStatus === "LOGGED_IN" ? (
-              <RecipeManager />
-            ) : (
-              <Navigate to="/login" />
-            )
-          }
-        />
-        <Route
-          path="/add-recipe"
-          element={
-            loggedInStatus === "LOGGED_IN" ? (
-              <RecipeForm />
-            ) : (
-              <Navigate to="/login" />
-            )
-          }
-        />
-        <Route
-          path="/edit-recipe/:id"
-          element={
-            loggedInStatus === "LOGGED_IN" ? (
-              <RecipeForm />
-            ) : (
-              <Navigate to="/login" />
-            )
-          }
-        />
-        <Route
-          path="/admin-dashboard"
-          element={
-            loggedInStatus === "LOGGED_IN" && adminStatus === "ADMIN" ? (
-              <AdminDashboard />
-            ) : (
-              <Navigate to="/" />
-            )
-          }
-        />
-        <Route path="*" element={<NoPage />} />
-      </Routes>
+      <Route
+        path="/recipe-manager"
+        element={
+          loggedInStatus === "LOGGED_IN" ? (
+            <RecipeManager />
+          ) : (
+            <Navigate to="/login" />
+          )
+        }
+      />
+      <Route
+        path="/add-recipe"
+        element={
+          loggedInStatus === "LOGGED_IN" ? (
+            <RecipeForm />
+          ) : (
+            <Navigate to="/login" />
+          )
+        }
+      />
+      <Route
+        path="/edit-recipe/:id"
+        element={
+          loggedInStatus === "LOGGED_IN" ? (
+            <RecipeForm />
+          ) : (
+            <Navigate to="/login" />
+          )
+        }
+      />
+      <Route
+        path="/admin-dashboard"
+        element={
+          loggedInStatus === "LOGGED_IN" && adminStatus === "ADMIN" ? (
+            <AdminDashboard />
+          ) : (
+            <Navigate to="/" />
+          )
+        }
+      />
+      <Route path="*" element={<NoPage />} />
+    </Routes>
   );
 }
 

@@ -46,15 +46,3 @@ const Results = () => {
 };
 
 export default Results;
-
-// {recipes.length > 0 ? (
-//   recipes.map((recipe) => (
-//     <div key={recipe._id}>
-//       <h3>{recipe.title}</h3>
-//       <img src={recipe.image}></img>
-//       <p>{recipe.id}</p>
-//     </div>
-//   ))
-// ) : (
-//   <p>No recipes found.</p>
-// )}

@@ -152,7 +152,7 @@
 @media screen and (max-width: 800px) {
   .recipe-contents {
     display: grid;
-    grid-template-columns: 1fr; // Single column layout for small screens
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 20px;
   }

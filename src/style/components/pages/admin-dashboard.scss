@@ -32,22 +32,21 @@
   @extend .recipe-management;
 }
 
-
 @media screen and (max-width: 800px) {
   .dashboard-title-wrapper {
     display: flex;
-  
+
     .management-header {
       font-size: 0.8em;
     }
   }
-  
+
   .management-btns {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  
+
   .recipe-management {
     font-size: 80%;
     text-wrap: nowrap;

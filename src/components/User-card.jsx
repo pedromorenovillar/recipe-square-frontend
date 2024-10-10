@@ -20,7 +20,7 @@ const UserCard = ({ email, is_admin, username, _id, onDelete, onUpdate }) => {
 
   const handleRoleChange = () => {
     const updatedRole = !is_admin;
-    
+
     updateUserRole(_id, updatedRole)
       .then((response) => {
         if (onUpdate) {
@@ -47,7 +47,9 @@ const UserCard = ({ email, is_admin, username, _id, onDelete, onUpdate }) => {
       </div>
 
       <div className="user-mngmt-btns">
-        <button className="change-role-btn" onClick={handleRoleChange}>Change role</button>
+        <button className="change-role-btn" onClick={handleRoleChange}>
+          Change role
+        </button>
         <button className="delete-user-btn" onClick={handleDelete}>
           <FontAwesomeIcon icon={faTrash} />
           Delete

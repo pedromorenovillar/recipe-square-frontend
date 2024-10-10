@@ -35,30 +35,18 @@ export default function Navbar() {
           <FontAwesomeIcon icon={faBars} className="dropicon" />
         </div>
         <div className="dropdown-links">
-          {!isHomePage && (
-            <Link to="/">
-              Home
-            </Link>
-          )}
+          {!isHomePage && <Link to="/">Home</Link>}
           {!isLoginPage && !isLoggedIn && (
-            <Link to="/login">
-              Login/Sign up
-            </Link>
+            <Link to="/login">Login/Sign up</Link>
           )}
           {!isAddRecipePage && isLoggedIn && (
-            <Link to="/add-recipe">
-              Add Recipe
-            </Link>
+            <Link to="/add-recipe">Add Recipe</Link>
           )}
           {!isRecipeManagerPage && isLoggedIn && (
-            <Link to="/recipe-manager">
-              Recipe Manager
-            </Link>
+            <Link to="/recipe-manager">Recipe Manager</Link>
           )}
           {isLoggedIn && adminStatus === "ADMIN" && !isAdminDashboard && (
-            <Link to="/admin-dashboard">
-              Admin Dashboard
-            </Link>
+            <Link to="/admin-dashboard">Admin Dashboard</Link>
           )}
           {isLoggedIn && !isLoginPage && (
             <div className="logout" onClick={handleLogoutClick}>

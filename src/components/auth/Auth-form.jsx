@@ -87,20 +87,12 @@ export default function AuthForm({ heading, onSubmit, serverError, formType }) {
       </div>
       {isLoginPage && (
         <div className="formRedirectionText">
-          Not a member yet? Sign up{" "}
-          <Link to="/signup">
-            here
-          </Link>
-          !
+          Not a member yet? Sign up <Link to="/signup">here</Link>!
         </div>
       )}
       {isSignupPage && (
         <div className="formRedirectionText">
-          Already a member? Then log in{" "}
-          <Link to="/login">
-            here
-          </Link>
-          !
+          Already a member? Then log in <Link to="/login">here</Link>!
         </div>
       )}
     </form>

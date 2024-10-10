@@ -40,7 +40,9 @@ export default function RecipeContainer() {
           </div>
         )}
       </div>
-      <div className="highlights-footer">2024 © Recipe Square. All rights reserved.</div>
+      <div className="highlights-footer">
+        10/10/2024 © Recipe Square. All rights reserved.
+      </div>
     </div>
   );
 }

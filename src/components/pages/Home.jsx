@@ -17,17 +17,6 @@ export default function Home() {
           <div className="logo-wrapper">
             <img src={logo} alt="recipe square logo"></img>
           </div>
-          {/* {loggedInStatus === "LOGGED_IN" ? (
-            <div>
-              Welcome back, {username}! You are logged in with ID: {user_id}.
-            </div>
-          ) : (
-            <div>You are NOT logged in.</div>
-          )} */}
-
-          {/* {adminStatus === "ADMIN" && (
-            <div>Admin Access: You have administrative privileges.</div>
-          )} */}
           <div className="searchbar-wrapper">
             <Searchbar />
           </div>

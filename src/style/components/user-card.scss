@@ -9,7 +9,8 @@
   border-radius: 5px;
   box-shadow: $box-shadow-inactive;
 
-  .user-info, .user-mngmt-btns {
+  .user-info,
+  .user-mngmt-btns {
     display: flex;
     flex-direction: column;
     justify-content: center;
